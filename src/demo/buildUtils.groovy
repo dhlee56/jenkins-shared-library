@@ -4,6 +4,6 @@ package demo
 
 def timedGradleBuild(tasks) {
    timestamps {
-      sh "echo {tasks}"
+      sh "echo ${tasks}"
    }
 }
