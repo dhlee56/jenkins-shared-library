@@ -1,6 +1,6 @@
-// org.demo.buildUtils
+// demo.buildUtils
 
-package org.demo
+package demo
 
 class buildUtils implements Serializable {
    def steps
