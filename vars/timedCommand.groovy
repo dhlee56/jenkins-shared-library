@@ -1,15 +1,15 @@
 // vars/timedCommand.groovy
 def setCommand(commandToRun) {
-cmd = commandToRun
+  cmd = commandToRun
 }
 def getCommand() {
-cmd
+  cmd
 }
 def runCommand() {
-timestamps {
-cmdOut = sh (script:"${cmd}", returnStdout:true).trim()
-}
+  timestamps {
+    cmdOut = sh (script:"${cmd}", returnStdout:true).trim()
+  }
 }
 def getOutput() {
-cmdOut
+  cmdOut
 }
