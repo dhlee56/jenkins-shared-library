@@ -2,8 +2,13 @@
 
 package demo
 
-def timedGradleBuild(tasks) {
-   timestamps {
-      sh "echo ${tasks}"
+class buildUtils implements Serializable {
+   def steps
+   buildUtils(steps) { this.steps = steps}
+   def timedGradleBuild(tasks) {
+      def gradleHome = 'gradle3.2'
+      steps.timestamps {
+         echo ${gradleHome}/bin/gradle ${tasks}
+      }
    }
 }
